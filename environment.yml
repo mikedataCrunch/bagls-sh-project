@@ -1,0 +1,37 @@
+name: cv-tf-torch
+channels:
+  - conda-forge
+  - nvidia
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - ipykernel
+  - python=3.8.13
+  - scikit-learn
+  - seaborn
+  - pip
+  - scipy
+  - notebook
+  - tensorflow
+  - tensorboard
+  - imgaug
+  - albumentations
+  - cuda-nvcc
+  - pip:
+    - jupyter-contrib-nbextensions
+    - ipywidgets
+    - scikit-image
+    - hydra
+    - hydra-joblib-launcher
+    - wandb
+    - omegaconf
+    - transformers
+    - torch
+    - timm
+    - librosa
+    - torch
+    - torchvision
+    - torchaudio
+    - kaggle
