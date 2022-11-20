@@ -1,0 +1,157 @@
+{
+  "@type": "Dataset",
+  "identifier": "10.1038/s41597-020-0526-3",
+  "title": "Metadata record for: BAGLS, a multihospital Benchmark for Automatic Glottis Segmentation",
+  "relatedPublications": [],
+  "repositories": [
+    {
+      "name": "Zenodo",
+      "value": "https://doi.org/10.5281/zenodo.3377544",
+      "@type": "DataCatalog"
+    }
+  ],
+  "assays": [
+    {
+      "measurementType": {
+        "annotationValue": "glottis",
+        "termAccession": "http://purl.obolibrary.org/obo/UBERON_0002486",
+        "termSource": "UBERON",
+        "@type": "PropertyValue"
+      },
+      "technologyType": {
+        "annotationValue": "Endoscopic Procedure",
+        "termAccession": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16546",
+        "termSource": "NCIT",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    },
+    {
+      "measurementType": {
+        "annotationValue": "Image Segmentation",
+        "termAccession": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80146",
+        "termSource": "NCIT",
+        "@type": "PropertyValue"
+      },
+      "technologyType": {
+        "annotationValue": "neural network model",
+        "termAccession": "http://www.bioassayontology.org/bao#BAO_0002345",
+        "termSource": "BAO",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    }
+  ],
+  "factors": [
+    {
+      "name": "age",
+      "type": {
+        "annotationValue": "age",
+        "termAccession": "http://purl.obolibrary.org/obo/PATO_0000011",
+        "termSource": "OBI",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    },
+    {
+      "name": "sex",
+      "type": {
+        "annotationValue": "biological sex",
+        "termAccession": "http://purl.obolibrary.org/obo/PATO_0000047",
+        "termSource": "OBI",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    },
+    {
+      "name": "healthy versus disordered subjects",
+      "type": {
+        "annotationValue": "disease",
+        "termAccession": "http://www.ebi.ac.uk/efo/EFO_0000408",
+        "termSource": "EFO",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    },
+    {
+      "name": "recording conditions",
+      "type": {
+        "annotationValue": "Diagnostic, Therapeutic, or Research Equipment",
+        "termAccession": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19238",
+        "termSource": "NCIT",
+        "@type": "PropertyValue"
+      },
+      "@type": "variableMeasured"
+    }
+  ],
+  "studyCharacteristics": {
+    "organism": [
+      {
+        "annotationValue": "Homo sapiens",
+        "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+        "termSource": "NCBITAXON",
+        "@type": "PropertyValue"
+      }
+    ],
+    "environmentType": [],
+    "geographicalLocation": [],
+    "@type": "variableMeasured"
+  },
+  "ontologySourceReferences": {
+    "OBI": {
+      "name": "OBI",
+      "description": "Ontology for Biomedical Investigations",
+      "file": "http://data.bioontology.org/ontologies/OBI",
+      "version": "2018-08-27",
+      "@type": "DefinedTermSet"
+    },
+    "EFO": {
+      "name": "EFO",
+      "description": "Experimental Factor Ontology",
+      "file": "http://data.bioontology.org/ontologies/EFO",
+      "version": "2.105",
+      "@type": "DefinedTermSet"
+    },
+    "NCIT": {
+      "name": "NCIT",
+      "description": "National Cancer Institute Thesaurus",
+      "file": "http://data.bioontology.org/ontologies/NCIT",
+      "version": "20.01d",
+      "@type": "DefinedTermSet"
+    },
+    "UBERON": {
+      "name": "UBERON",
+      "description": "Uber Anatomy Ontology",
+      "file": "http://data.bioontology.org/ontologies/UBERON",
+      "version": "releases/2014-06-15",
+      "@type": "DefinedTermSet"
+    },
+    "BAO": {
+      "name": "BAO",
+      "description": "BioAssay Ontology",
+      "file": "http://data.bioontology.org/ontologies/BAO",
+      "version": "2.4",
+      "@type": "DefinedTermSet"
+    },
+    "NCBITAXON": {
+      "name": "NCBITAXON",
+      "description": "National Center for Biotechnology Information (NCBI) Organismal Classification",
+      "file": "http://data.bioontology.org/ontologies/NCBITAXON",
+      "version": "2019AB",
+      "@type": "DefinedTermSet"
+    },
+    "@type": "CategoryCodeSet"
+  },
+  "comments": [
+    {
+      "name": "Created With Configuration",
+      "value": "1.0",
+      "@type": "SoftwareApplication"
+    },
+    {
+      "name": "Data Descriptor License",
+      "value": "CC-BY-4.0",
+      "@type": "CreativeWork"
+    }
+  ]
+}
