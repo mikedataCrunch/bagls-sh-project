@@ -3,3 +3,11 @@ test/
 training/
 videos/
 benchmark-for-automatic-glottis-segmentation.zip
+.ipynb_checkpoints/
+dataset/
+models/
+sample-dataset/
+wandb/
+artifacts/
+__pycache__/
+radimagenet-pretrained/

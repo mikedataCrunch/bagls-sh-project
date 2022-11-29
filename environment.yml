@@ -1,7 +1,6 @@
-name: cv-tf-torch
+name: armas
 channels:
   - conda-forge
-  - nvidia
   - defaults
 dependencies:
   - matplotlib
@@ -15,10 +14,6 @@ dependencies:
   - scipy
   - notebook
   - tensorflow
-  - tensorboard
-  - imgaug
-  - albumentations
-  - cuda-nvcc
   - pip:
     - jupyter-contrib-nbextensions
     - ipywidgets
@@ -31,7 +26,3 @@ dependencies:
     - torch
     - timm
     - librosa
-    - torch
-    - torchvision
-    - torchaudio
-    - kaggle
