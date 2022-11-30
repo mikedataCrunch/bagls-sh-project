@@ -16,6 +16,11 @@ def get_save_path(model_name):
     model_filepath = os.path.join(model_dir, model_name)
     return model_filepath
 
+def _get_last_conv_layer(self):
+    for layer in reversed(self.model.layers):
+        if len(layer.output_shape) == 4:
+            return layer.name
+    raise ValueError("Could not find 4D layer. GradCAM wont work")
         
 # metrics
 def get_sensitivity(tp, fp, tn, fn):
