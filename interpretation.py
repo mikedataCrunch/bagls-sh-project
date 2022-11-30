@@ -24,7 +24,15 @@ class GradCAM:
         self.grad_model = tf.keras.models.Model(inputs=[self.model.inputs],
                                                outputs=[self.model.get_layer(self.layer_name).output,
                                                         self.model.output])
+    def _get_last_conv_layer(self):
+        for layer in reversed(self.model.layers):
+            if len(layer.output_shape) == 4:
+                return layer.name
+        raise ValueError("Could not find 4D layer. GradCAM wont work")
+                         
     def compute_heatmap(self, image, pred_index=None):
+        if self.layer_name == None:
+            self.layer_name = _get_last_conv_layer()
         
         with tf.GradientTape() as tape:
 #             tape.watch(self.grad_model.get_layer(self.layer_name).output)            
@@ -108,13 +116,12 @@ class GradCAM:
         return superimposed_img
 
 class GRADCamLogger(Callback):
-    def __init__(self, generator, layer_name, num_log_batches=1):
+    def __init__(self, generator, layer_name=None, num_log_batches=1):
         super(GRADCamLogger, self).__init__()
         self.generator = generator
         self.num_log_batches = 1
         self.layer_name = layer_name
         self.flat_class_names = [k for k, v in generator.class_indices.items()]
-
 
     def on_epoch_end(self, logs, epoch):
         val_data, val_labels = zip(
@@ -130,7 +137,6 @@ class GRADCamLogger(Callback):
         
         # init gradcam class
         cam = GradCAM(self.model, self.layer_name)
-  
         for image, label_arr in zip(val_data, val_labels):
             label_index = np.argmax(label_arr)
             # get and append true label
@@ -166,11 +172,11 @@ class GRADCamLogger(Callback):
 
         
         # log validation predictions alongside the run
-        columns = ["id", "image", "gradcam-overlay", "pred_score", "pred", "truth"]
+        columns = ["id", "image", "gradcam-overlay", "pred_score", "pred", "truth", "gradcam_layer"]
         gradcam_table = wandb.Table(columns = columns)
         
         for item in zip(image_ids, images, gradcams, pred_scores, pred_labels, true_labels):
-            row = [item[0], wandb.Image(item[1]), wandb.Image(item[2]), *item[3:]]
+            row = [item[0], wandb.Image(item[1]), wandb.Image(item[2]), *item[3:], cam._get_last_conv_layer]
             gradcam_table.add_data(*row)
                                   
         wandb.run.log({GRADCAM_TABLE_NAME : gradcam_table})
