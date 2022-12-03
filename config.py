@@ -13,11 +13,11 @@ nb_configs = {
     'fill_mode' : 'nearest',
     'horizontal_flip': True,
     'rotation_range': 30,  
-    'train_dir' : '../sample-dataset/train',
-    'test_dir' : '../sample-dataset/test',
-#     'train_dir' : '../dataset/train',
-#     'test_dir' : '../dataset/test',
-    'batch_size' : 64,
+#     'train_dir' : '../sample-dataset/train',
+#     'test_dir' : '../sample-dataset/test',
+    'train_dir' : '../dataset/train',
+    'test_dir' : '../dataset/test',
+    'batch_size' : 128,
     'class_names' : ["healthy", "unhealthy"],
     'interpol' : "bilinear",
     'cmap' : "rgb",
@@ -26,7 +26,7 @@ nb_configs = {
     'image_size' : (224, 224),
     'dropout_rate': 0.2,
     'thresh' : 0.5,
-    'epochs': 5,
+    'epochs': 10,
 }
 
 pt_configs = {

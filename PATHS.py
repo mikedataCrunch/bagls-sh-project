@@ -7,3 +7,5 @@ inception_resnet_v2_weights = "../radimagenet-pretrained/RadImageNet-IRV2_notop.
 
 models_dir = "../models"
 bootstrap_dir = "../dataset/bootstraps"
+train_meta = "../dataset/train.csv"
+test_meta = "../dataset/test.csv"
