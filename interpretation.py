@@ -68,22 +68,22 @@ class GradCAM:
         
         # normalize heatmap values image-wise : zero out negative values in heatmap
         heatmap = tf.maximum(heatmap, 0) / tf.math.reduce_max(heatmap)
-        return heatmap.numpy()
-    
-    
-    def overlay_heatmap(self, heatmap, image, alpha=0.4):
-        """Return the image with super-imposed GradCAM explanations"""
-        heatmap = np.uint8(255 * heatmap)
+        
+        heatmap = np.uint8(255 * heatmap.numpy())
         jet = cm.get_cmap("jet")
         
         jet_colors = jet(np.arange(256))[:, :3]
-        jet_heatmap = jet_colors[heatmap]
+        heatmap = jet_colors[heatmap]
         
-        jet_heatmap = tf.keras.preprocessing.image.array_to_img(jet_heatmap)
-        jet_heatmap = jet_heatmap.resize((image.shape[1], image.shape[0]))
-        jet_heatmap = tf.keras.preprocessing.image.img_to_array(jet_heatmap)
-        
-        superimposed_img = jet_heatmap * alpha * image
+        heatmap = tf.keras.preprocessing.image.array_to_img(heatmap)
+        heatmap = heatmap.resize((image.shape[1], image.shape[0]))
+        heatmap = tf.keras.preprocessing.image.img_to_array(heatmap)
+        return heatmap
+    
+    
+    def overlay_heatmap(self, heatmap, image, alpha=0.6):
+        """Return the image with super-imposed GradCAM explanations"""
+        superimposed_img = heatmap * alpha * image
         superimposed_img = tf.keras.preprocessing.image.array_to_img(superimposed_img)
         
         return superimposed_img   

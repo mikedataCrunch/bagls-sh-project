@@ -15,14 +15,7 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
 - Primary intended use: Experiment/Workflow Development [NOT INTENDED FOR PRODUCTION]
 
 
-### Factors
-- 
-
 ### Metrics
-
-- Model performance measures (Pre-calibration results)
-
-- Decision thresholds (Post calibration results)
 
 - FLOPS comparison
 
@@ -68,11 +61,11 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
     - Shear
     - Zoom
 
+## Full project report:
 
-### GradCAM Interpretation
+`wandb.ai` Experiment report can be found in the link below.
 
-- Unitary results
-- Intersectional results
+<iframe src="https://wandb.ai/miked/bagls-sh-project/reports/Unhealthy-Glottis-Classification-BAGLS-dataset---VmlldzozMDgxNTkw" style="border:none;height:1024px;width:100%"></iframe>
 
 ### Caveats and Recommendations
 

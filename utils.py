@@ -111,8 +111,15 @@ def get_results(true, preds, num_thresh, class_index):
     return roc, pr, perfect, probas
 
 
-def plot_results(ax, roc, pr, perfect, probas):
-    ax[0].hist(x=[probas[0], probas[1]], 
+def plot_results(ax, roc, pr, perfect, probas, true):
+    proba_0, proba_1 = [], []
+    for index, label in enumerate(true):
+        if label:
+            # class of interest is 1 (unhealthy)
+            proba_1.append(probas[1][index])
+        else:
+            proba_0.append(probas[1][index])
+    ax[0].hist(x=[proba_0, proba_1], 
                bins=20, color=['gray', 'orange'], alpha=0.5)
     ax[0].set_title("Histogram of classes")
     ax[0].set_xlabel("Probability score")
