@@ -35,8 +35,3 @@ unzip benchmark-for-automatic-glottis-segmentation.zip
 ```
 
 Retain the resulting directory structure for use in the notebooks and scripts included in this repository.
-
-
-`uname -m` linux architecture
-Linux distro details cat `/etc/*-release`
-
