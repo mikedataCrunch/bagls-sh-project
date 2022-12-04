@@ -2,6 +2,11 @@
 An image classification project on the Benchmark of Automatic Glottis Segmentation (BAGLS) dataset.
 
 
+## Full project report
+
+`wandb.ai` Experiment report can be found in this link: [WANDB REPORT](https://wandb.ai/miked/bagls-sh-project/reports/Unhealthy-Glottis-Classification-BAGLS-dataset---VmlldzozMDgxNTkw?accessToken=rdn2slmxv3qjxomt8834r97yi0u00asw7d3aa3d2rnzw834whbawq12maihhz8ef).
+
+
 ## Model Details
 - By: Michael Dorosan
 - Date: Dec 4, 2022
@@ -61,13 +66,13 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
     - Shear
     - Zoom
 
-## Full project report:
 
-`wandb.ai` Experiment report can be found in the link below.
+### GradCAM Interpretation
 
-<iframe src="https://wandb.ai/miked/bagls-sh-project/reports/Unhealthy-Glottis-Classification-BAGLS-dataset---VmlldzozMDgxNTkw" style="border:none;height:1024px;width:100%"></iframe>
+GradCAM was used to interpret model predictions particularly those images with poor predictions of disorder status (false negative: predicted healthy but are otherwise not). Here are a few examples.
 
-### Caveats and Recommendations
+![sample prediction](sample-prediction.png)
+
 
 
 ## Setup
