@@ -26,6 +26,14 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
 
 - FLOPS comparison
 
+| Model                 | GFLOPs | Input Size  |
+|-----------------------|--------|-------------|
+| InceptionResNetV2     | 6.476  | [224,224,3] |
+| DenseNet121           | 2.835  | [224,224,3] |
+| InceptionV3           | 2.843  | [224,224,3] |
+| ResNet50              | 3.863  | [224,224,3] |
+| conv_net_from_scratch | 0.5581 | [224,224,3] |
+
 
 ### Evaluation Data
 - Dataset: BAGLS `test` dataset
