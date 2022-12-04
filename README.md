@@ -49,7 +49,7 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
 
 - Dataset: BAGLS `train` dataset with less imbalanced class sizes (i.e., in terms of disorder status, image source, etc). 
 - Motivation: Train model to learn from features of various classes. For this task, the classes were simplified to be either unhealthy or healthy glottis.
-- Filtering: mages with unclear disorder status were removed.
+- Filtering: Images with unclear disorder status were removed.
     ```
     None (half year after diag of small vocal nodules)
     functional
