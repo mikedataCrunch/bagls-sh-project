@@ -13,8 +13,8 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
 - Model version: 0.0
 - Model type: Classifer, `tensorflow.keras` `.h5` model
 - Models made use of transfer learning which were initialized using pretrained weights of RadImagenet models.
-    - Dataset details: BAGLS paper
-    - Pretrained weights: RadImagenet
+    - Dataset details: [BAGLS paper](https://www.nature.com/articles/s41597-020-0526-3#Tab1)
+    - Pretrained weights: [RadImagenet](https://github.com/BMEII-AI/RadImageNet)
 
 ### Intended Use
 - Primary intended use: Experiment/Workflow Development [NOT INTENDED FOR PRODUCTION]
@@ -69,7 +69,7 @@ An image classification project on the Benchmark of Automatic Glottis Segmentati
 
 ### GradCAM Interpretation
 
-GradCAM was used to interpret model predictions particularly those images with poor predictions of disorder status (false negative: predicted healthy but are otherwise not). Here are a few examples.
+GradCAM was used to interpret model predictions particularly those images with poor predictions of disorder status (false negative: predicted healthy but are otherwise not). Below is an example.
 
 ![sample prediction](sample-prediction.png)
 
@@ -83,7 +83,7 @@ conda env create -f environment.yml
 
 Activate
 ```
-conda activate cv-tf-torch
+conda activate bagls-sh-project
 ```
 
 ### Data Download
