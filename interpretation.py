@@ -15,7 +15,7 @@ class GradCAM:
         
         https://www.pyimagesearch.com/2020/03/09/grad-cam-visualize-class-activation-maps-with-keras-tensorflow-and-deep-learning/
         https://github.com/ayulockin/interpretabilitycnn/
-        
+        https://keras.io/examples/vision/grad_cam/
     """
 
     def __init__(self, model, layer_name):
